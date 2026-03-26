@@ -1,0 +1,75 @@
+🔒 Encapsulation
+
+Encapsulation is about bundling data (variables) and methods (functions) together and restricting direct access to some parts of an object.
+
+Key idea:
+
+👉 “Hide internal details and control access.”
+
+How it’s done in JS:
+Using closures
+Using private fields (#) in classes
+Using getters and setters
+Example:
+class BankAccount {
+  #balance = 0; // private field
+
+  deposit(amount) {
+    this.#balance += amount;
+  }
+
+  getBalance() {
+    return this.#balance;
+  }
+}
+
+const acc = new BankAccount();
+acc.deposit(100);
+console.log(acc.getBalance()); // 100
+// console.log(acc.#balance); ❌ Error (private)
+
+✅ Here, #balance is hidden from outside → encapsulation.
+
+🎭 Data Abstraction
+
+Data abstraction is about showing only essential features and hiding complex implementation details.
+
+Key idea:
+
+👉 “Expose what is necessary, hide how it works.”
+
+How it’s done in JS:
+Using functions or classes with simple interfaces
+Hiding complex logic inside methods
+Example:
+class CoffeeMachine {
+  makeCoffee() {
+    this.#boilWater();
+    this.#brewCoffee();
+    console.log("Coffee is ready!");
+  }
+
+  #boilWater() {
+    console.log("Boiling water...");
+  }
+
+  #brewCoffee() {
+    console.log("Brewing coffee...");
+  }
+}
+
+const machine = new CoffeeMachine();
+machine.makeCoffee(); 
+
+✅ User just calls makeCoffee() without knowing internal steps → abstraction.
+
+⚖️ Key Differences
+Feature	Encapsulation	Data Abstraction
+Purpose	Protect data	Simplify complexity
+Focus	Restrict access	Hide implementation
+Achieved by	Private fields, closures	Interfaces, public methods
+User sees	Controlled access to data	Only essential features
+Example analogy	Capsule (data + methods together)	Remote control (simple interface)
+🧠 Simple Way to Remember
+Encapsulation = “Protect data” 🔒
+Abstraction = “Hide complexity” 🎭

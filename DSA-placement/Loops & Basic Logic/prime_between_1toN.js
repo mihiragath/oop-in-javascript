@@ -16,7 +16,6 @@ for (let num = 2; num <= n; num++) {
 }
 
 //optimize code
-let n = 20;
 
 for (let num = 2; num <= n; num++) {
   let isPrime = true;

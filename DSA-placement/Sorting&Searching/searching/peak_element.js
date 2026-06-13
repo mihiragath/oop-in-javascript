@@ -1,4 +1,5 @@
-let a = [1, 2, 3, 4, 5, 1, 2];
+//let a = [1, 2, 3, 4, 5, 1, 2];
+let a = [1, 3, 8, 9, 6, 7, 1, 2, 10, 12];
 function findPeakElement(arr) {
   let low = 0;
   let high = arr.length - 1;

@@ -13,7 +13,7 @@ for (let i = 0; i < n; i++) {
 }
 console.log(subarrays);
 console.log(totalSubarrays);
- 
+
 //without slice method
 let subarraysWithoutSlice = [];
 for (let i = 0; i < n; i++) {
